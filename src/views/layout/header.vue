@@ -11,11 +11,14 @@
     <ul
       class="header-operations"
     >
-      <li></li>
-      <li class="header-download"></li>
-      <li></li>
+      <li />
+      <li class="header-download" />
+      <li />
       <li>
-        <el-avatar size="large" :src="headerImage"></el-avatar>
+        <el-avatar
+          size="large"
+          :src="headerImage"
+        />
       </li>
     </ul>
   </el-header>

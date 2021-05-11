@@ -37,16 +37,16 @@ module.exports = {
       }
     }
   },
-  devServer: {
-    // proxy: {
-    //   '/api': {
-    //     changeOrigin: true,
-    //     target: 'http://localhost:8080',
-    //     xfwd: true,
-    //     headers: {
-    //     }
-    //   }
-    // }
-  },
+  // devServer: {
+  //   proxy: {
+  //     '/rules': {
+  //       changeOrigin: true,
+  //       target: 'http://localhost:1009',
+  //       xfwd: true,
+  //       headers: {
+  //       }
+  //     }
+  //   }
+  // },
   pluginOptions: {}
 }

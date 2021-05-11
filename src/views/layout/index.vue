@@ -2,14 +2,19 @@
   <el-container
     class="layout"
   >
-    <layout-header></layout-header>
+    <layout-header />
     <el-container class="layout-content">
-      <layout-aside></layout-aside>
+      <layout-aside />
       <el-main class="layout-content-main">
         <el-breadcrumb class="layout-content-main-breadcrumb">
-          <el-breadcrumb-item v-for="item in breadcrumb" :key="item">{{item}}</el-breadcrumb-item>
+          <el-breadcrumb-item
+            v-for="item in breadcrumb"
+            :key="item"
+          >
+            {{ item }}
+          </el-breadcrumb-item>
         </el-breadcrumb>
-        <layout-content></layout-content>
+        <layout-content />
       </el-main>
     </el-container>
     <el-backtop

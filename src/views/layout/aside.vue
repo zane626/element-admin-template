@@ -13,12 +13,15 @@
         :key="item.label"
         :index="item.label"
       >
-        <template slot="title"><i class="el-icon-message"></i>{{item.label}}</template>
+        <template slot="title">
+          <i class="el-icon-message" />{{ item.label }}
+        </template>
         <el-menu-item
           v-for="child in item.children"
           :key="child.label"
           :index="child.path"
-        >{{child.label}}
+        >
+          {{ child.label }}
         </el-menu-item>
       </el-submenu>
     </el-menu>
@@ -40,6 +43,12 @@ export default {
       menu: []
     }
   },
+  computed: {
+    defaultActive () {
+      console.log(this.$route)
+      return this.$route.path
+    }
+  },
   created () {
     let project = routerConfig.routes.find(i => i.name === 'project')
     if (!_.isEmpty(project)) {
@@ -54,12 +63,6 @@ export default {
           })
         }
       })
-    }
-  },
-  computed: {
-    defaultActive () {
-      console.log(this.$route)
-      return this.$route.path
     }
   }
 }
